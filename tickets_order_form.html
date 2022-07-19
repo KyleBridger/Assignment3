@@ -113,9 +113,56 @@
             />
           </fieldset>
 
-          <fieldset class="payment-method"></fieldset>
+          <fieldset class="payment-method">
+            <legend>Payment Method</legend>
+            <input type="radio" name="payment-method" value="bill" />
+            <label for="bill">Bill Me</label>
+            <input type="radio" name="payment-method" value="credit" />
+            <label for="credit">Credit Card</label>
+          </fieldset>
 
-          <fieldset class="credit-card"></fieldset>
+          <fieldset class="credit-card">
+            <legend>Credit Card Information</legend>
+            <label for="card-type">Card Type:</label>
+            <select name="card-type">
+              <option value="visa" selected>Visa</option>
+              <option value="master-card">Master Card</option>
+              <option value="discovery">Discovery</option>
+            </select>
+            <br />
+            <label for="card-number">Card Number:</label>
+            <input
+              type="text"
+              name="card-number"
+              placeholder="16 digits"
+              maxlength="16"
+            />
+            <br />
+            <label for="expiration">Expiration Date:</label>
+            <select name="expiration">
+              <option value="jan" selected>January</option>
+              <option value="feb">February</option>
+              <option value="mar">March</option>
+              <option value="apr">April</option>
+              <option value="may">May</option>
+              <option value="jun">June</option>
+              <option value="jul">July</option>
+              <option value="aug">August</option>
+              <option value="sept">September</option>
+              <option value="oct">October</option>
+              <option value="nov">November</option>
+              <option value="dec">December</option>
+            </select>
+            <select name="expiration-year">
+              <option value="2021" selected>2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+            </select>
+          </fieldset>
 
           <fieldset class="submit">
             <input type="submit" value="Submit" />
