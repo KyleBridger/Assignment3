@@ -62,19 +62,23 @@
           <fieldset class="member-info">
             <legend>Member Information</legend>
             <label for="email">E-Mail:</label>
-            <input type="text" name="email" autofocus /><br />
+            <input type="email" name="email" autofocus required /><br />
             <label for="first-name">First Name:</label>
-            <input type="text" name="first-name" /><br />
+            <input type="text" name="first-name" required /><br />
             <label for="last-name">Last Name:</label>
-            <input type="text" name="last-name" /><br />
+            <input type="text" name="last-name" required /><br />
             <label for="address">Address:</label>
             <input type="text" name="address"/ ><br />
+            <label for="city">City:</label>
+            <input type="text" name="city"/ required><br />
             <label for="province">Province:</label>
             <input
               type="text"
               name="province"
               placeholder="2-character code"
               maxlength="2"
+              pattern="[A-Za-z]{2}"
+              required
             /><br />
             <label for="postal-code">Postal Code:</label>
             <input
@@ -85,7 +89,12 @@
               required
             /><br />
             <label for="phone-number">Phone Number:</label>
-            <input type="text" name="phone-number" placeholder="999-999-9999" />
+            <input
+              type="tel"
+              name="phone-number"
+              placeholder="999-999-9999"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            />
           </fieldset>
 
           <fieldset class="order-info">
@@ -105,9 +114,9 @@
               <option value="single-tickets">Single Tickets</option>
             </select>
             <br />
-            <label for="num-tickets">Card Type:</label>
+            <label for="num-tickets">Number of Tickets:</label>
             <input
-              type="text"
+              type="number"
               name="num-tickets"
               placeholder="Number of single tickets"
             />
@@ -115,9 +124,19 @@
 
           <fieldset class="payment-method">
             <legend>Payment Method</legend>
-            <input type="radio" name="payment-method" value="bill" />
+            <input
+              type="radio"
+              id="bill"
+              name="payment-method"
+              value="bill-me"
+            />
             <label for="bill">Bill Me</label>
-            <input type="radio" name="payment-method" value="credit" />
+            <input
+              type="radio"
+              id="credit"
+              name="payment-method"
+              value="credit-card"
+            />
             <label for="credit">Credit Card</label>
           </fieldset>
 
@@ -135,7 +154,8 @@
               type="text"
               name="card-number"
               placeholder="16 digits"
-              maxlength="16"
+              pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"
+              required
             />
             <br />
             <label for="expiration">Expiration Date:</label>
