@@ -62,7 +62,9 @@
           <fieldset class="member-info">
             <legend>Member Information</legend>
             <label for="email">E-Mail:</label>
-            <input type="email" name="email" autofocus required /><br />
+            <input type="email" name="email" autofocus required pattern
+            ="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"" title="Example:
+            John.Doe@outlook.com" /><br />
             <label for="first-name">First Name:</label>
             <input type="text" name="first-name" required /><br />
             <label for="last-name">Last Name:</label>
@@ -78,22 +80,19 @@
               placeholder="2-character code"
               maxlength="2"
               pattern="[A-Za-z]{2}"
+              title="Example: ON (Ontario)"
               required
             /><br />
             <label for="postal-code">Postal Code:</label>
-            <input
-              type="text"
-              name="postal-code"
-              placeholder="6 characters"
-              maxlength="6"
-              required
-            /><br />
+            <input type="text" name="postal-code" placeholder="6 characters"
+            pattern ="[A-Za-z0-9]{6}"" required title="Example: A1B1C1"/><br />
             <label for="phone-number">Phone Number:</label>
             <input
               type="tel"
               name="phone-number"
               placeholder="999-999-9999"
               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              title="Example: 123-456-7890"
             />
           </fieldset>
 
@@ -119,6 +118,7 @@
               type="number"
               name="num-tickets"
               placeholder="Number of single tickets"
+              title="Example: 10"
             />
           </fieldset>
 
@@ -155,6 +155,7 @@
               name="card-number"
               placeholder="16 digits"
               pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"
+              title="Example: 1234-1234-1234-1234"
               required
             />
             <br />
