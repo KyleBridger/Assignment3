@@ -58,7 +58,12 @@
       <main>
         <h1>Order Event Tickets</h1>
         <!-- The form starts here... -->
-        <form action="/place_order.html" method="post" name="order_form">
+        <form
+          action="/place_order.html"
+          method="post"
+          name="order_form"
+          id="order_form"
+        >
           <fieldset class="member-info">
             <legend>Member Information</legend>
             <label for="email">E-Mail:</label>
@@ -85,7 +90,8 @@
             /><br />
             <label for="postal-code">Postal Code:</label>
             <input type="text" name="postal-code" placeholder="6 characters"
-            pattern ="[A-Za-z0-9]{6}"" required title="Example: A1B1C1"/><br />
+            pattern ="[A-Za-z0-9]{6}"" required title="Example: A1B1C1"
+            maxlength="6"/><br />
             <label for="phone-number">Phone Number:</label>
             <input
               type="tel"
@@ -119,6 +125,7 @@
               name="num-tickets"
               placeholder="Number of single tickets"
               title="Example: 10"
+              min="0"
             />
           </fieldset>
 
@@ -185,8 +192,9 @@
             </select>
           </fieldset>
 
-          <fieldset class="submit">
-            <input type="submit" value="Submit" />
+          <fieldset class="submit-reset">
+            <legend>Submit Your Order</legend>
+            <input type="submit" value="Submit" id="submit" />
             <input type="reset" value="Reset Fields" />
           </fieldset>
         </form>
