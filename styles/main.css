@@ -188,10 +188,12 @@ footer p {
   text-align: center;
 }
 
+/* Adding space between fieldset elements */
 #order_form fieldset {
   margin-top: 1em;
 }
 
+/* Legend formatting */
 #order_form legend {
   margin-bottom: 0.5em;
   font-size: 85%;
@@ -199,6 +201,7 @@ footer p {
   color: gray;
 }
 
+/* Formatting all label, input, and select fields to be the same, except the payment method */
 #order_form :not(.payment-method) label,
 input,
 select {
@@ -208,16 +211,19 @@ select {
   width: 15em;
 }
 
+/* Label alignment */
 #order_form label {
   text-align: right;
 }
 
+/* Required input formatting */
 #order_form input:required {
   border-style: solid;
   border-color: orange;
   border-width: 2px;
 }
 
+/* Valid input formatting */
 #order_form input:valid {
   border-style: solid;
   border-color: black;
@@ -246,12 +252,14 @@ input[type="radio"] {
   margin-left: 3em;
 }
 
+/* Submit and reset button formatting */
 .submit-reset input {
   width: 10em;
   margin-top: 0.25em;
   margin-left: 15.5em;
 }
 
+/* Fixing the gap between the buttons */
 .submit-reset #submit {
   margin-right: -15em;
 }
